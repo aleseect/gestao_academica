@@ -21,16 +21,18 @@ public class CalculoMedia {
 
         //Media
         Float mediaFinal = (prova1 + prova2 + exercicios + projetos) /4;//media
-        Integer minimoAprovacao = 10;//valor minimo
-        Float resultado = minimoAprovacao - mediaFinal;
-        /*valida se a media é superior a 8 tanto das provas, quanto com o valor mínimo da prova final */
 
-        //Condicional
-        if(mediaFinal >= 8 || resultado >= 8){
-            System.out.println("A média da(o) "+nome+" é "+mediaFinal+" e foi aprovada(o)!");
+
+        if( mediaFinal > 8){
+            System.out.println("Aprovada com média final de " +mediaFinal);
         }
         else{
-            System.out.println("A media da(o) "+nome+" é "+resultado+ " e foi reprovada(o)!");
-        }
+           if(mediaFinal > 5){
+                System.out.println("A aluna recebeu a média final de " +mediaFinal+ ",portanto está de recuperação");
+            }
+           else{
+               System.out.println("A aluna foi reprovada com média final de " +mediaFinal);
+           }
+        }//fim da condicional
     }
 }
